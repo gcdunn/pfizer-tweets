@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     conn = sql.connect(local_db)
     c = conn.cursor()
-    for tweet in tweepy.Cursor(api.search,q="#pfizer",count=250000,
+    for tweet in tweepy.Cursor(api.search,q="#PfizerBioNTech",count=250000,
                            lang="en",
                            since="2020-01-01").items():
         print (tweet.created_at, tweet.text)
